@@ -1,13 +1,16 @@
 type CabecalhoProps = {
     paginaProps:string;
     nrPaginaProps:number | string;
+}
+
+type Cabecalho2Props = {
     statusProps:"loading" | "deployed";
     avisoProp:Function;
 }
 
 
 
-function Cabecalho({paginaProps,nrPaginaProps,statusProps,avisoProps}:CabecalhoProps){
+function Cabecalho({paginaProps,nrPaginaProps,statusProps,avisoProps}:CabecalhoProps & Cabecalho2Props){
 
     // if(typeof nrPaginaProps === "number"){
     //     document.title = statusProps + "-"+ nrPaginaProps;
