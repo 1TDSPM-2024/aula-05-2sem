@@ -8,5 +8,5 @@ export type CabecalhoProps = {
 
 export interface Cabecalho2Props  {
     statusProps:"loading" | "deployed";
-    avisoProp:Function;
+    avisoProps:Function;
 }
