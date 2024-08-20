@@ -15,20 +15,20 @@ function App(){
       {/* Area de props */}
       <Cabecalho statusProps = {status} paginaProps={pagina}  nrPaginaProps={nrPagina} avisoProps = {aviso}>
         <ul>
-          <li><a href="#"></a>Aluno-1</li>
-          <li><a href="#"></a>Aluno-2</li>
-          <li><a href="#"></a>Aluno-3</li>
-          <li><a href="#"></a>Aluno-4</li>
-          <li><a href="#"></a>Aluno-5</li>
-          <li><a href="#"></a>Aluno-6</li>
-          <li><a href="#"></a>Aluno-7</li>
-          <li><a href="#"></a>Aluno-8</li>
-          <li><a href="#"></a>Aluno-9</li>
-          <li><a href="#"></a>Aluno-10</li>
+          <li><a href="#">Aluno-1</a></li>
+          <li><a href="#">Aluno-2</a></li>
+          <li><a href="#">Aluno-3</a></li>
+          <li><a href="#">Aluno-4</a></li>
+          <li><a href="#">Aluno-5</a></li>
+          <li><a href="#">Aluno-6</a></li>
+          <li><a href="#">Aluno-7</a></li>
+          <li><a href="#">Aluno-8</a></li>
+          <li><a href="#">Aluno-9</a></li>
+          <li><a href="#">Aluno-10</a></li>
         </ul>
       </Cabecalho>
     </div>
-  )
+  );
 }
 
 export default App
