@@ -4,8 +4,13 @@ export type Cabecalho1Props = {
     children:React.ReactNode;
 }
 
-export type Cabecalho2Props = {
+// export type Cabecalho2Props = {
+//     statusProps:"loading" | "deployed";
+//     avisoProps:Function;
+// }
+
+
+export interface Cabecalho2Props  {
     statusProps:"loading" | "deployed";
     avisoProps:Function;
 }
-
