@@ -1,16 +1,8 @@
-type CabecalhoProps = {
-    paginaProps:string;
-    nrPaginaProps:number | string;
-}
-
-type Cabecalho2Props = {
-    statusProps:"loading" | "deployed";
-    avisoProp:Function;
-}
+import { CabecalhoProps,Cabecalho2Props } from "./Types";
 
 
 
-function Cabecalho({paginaProps,nrPaginaProps,statusProps,avisoProps}:CabecalhoProps & Cabecalho2Props){
+function Cabecalho({paginaProps,nrPaginaProps,statusProps,avisoProps,children}:CabecalhoProps & Cabecalho2Props){
 
     // if(typeof nrPaginaProps === "number"){
     //     document.title = statusProps + "-"+ nrPaginaProps;
@@ -20,12 +12,14 @@ function Cabecalho({paginaProps,nrPaginaProps,statusProps,avisoProps}:CabecalhoP
     // }
 
     document.title = statusProps+ "-"+nrPaginaProps
-    document.addEventListener("click",()=>{})
 
     return(
         <header>
             <h1>{paginaProps+"\n-"+nrPaginaProps}</h1>
             <button onClick={()=> avisoProps()}>Aviso</button>
+            <div>
+                {children}
+            </div>
         </header>
     );
 }
