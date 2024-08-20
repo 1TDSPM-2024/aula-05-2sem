@@ -1,10 +1,22 @@
-function Cabecalho(props:{tituloProps:string}) {
+import { Cabecalho1Props,Cabecalho2Props } from "../../types";
 
-    document.title = props.tituloProps;
+function Cabecalho({paginaProps,nrPaginaProps,statusProps,avisoProps,children}:Cabecalho1Props & Cabecalho2Props) {
 
+    // if(typeof nrPaginaProps === "number"){
+    //     document.title = statusProps+" - "+nrPaginaProps;
+    // }else{
+    //     nrPaginaProps = "..??..";
+    //     document.title = statusProps+" - "+nrPaginaProps;
+    // }
+
+    document.title = statusProps+" - "+nrPaginaProps; 
     return(
         <header>
-            <h1>{props.tituloProps}</h1>
+            <h1>{paginaProps+"\n- "+nrPaginaProps}</h1>
+            <button onClick={()=> avisoProps()}>Aviso</button>
+            <div>
+                {children}
+            </div>
         </header>
     );
 }
