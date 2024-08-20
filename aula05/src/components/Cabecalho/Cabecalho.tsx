@@ -1,18 +1,25 @@
-type CabecalhoProps = {
-    tituloProps:string;
-    avisoProps:Function;
-}
+import { CabecalhoProps, Cabecalho2Props } from "../../types";
 
-function Cabecalho({tituloProps,avisoProps}: CabecalhoProps) {
 
-    document.title = tituloProps;
+function Cabecalho({paginaProps,nrPaginaProps,statusProps,avisoProps,children}: CabecalhoProps & Cabecalho2Props) {
 
-    document.addEventListener("click",()=>{})
+
+    // if(typeof nrPaginaProps === "number"){
+    //     document.title = statusProps+" - "+nrPaginaProps;
+    // }else{
+    //     nrPaginaProps = "..??..";
+    //     document.title = statusProps+" - "+nrPaginaProps;
+    // }
+
+    document.title = statusProps+ " - " +nrPaginaProps;
 
     return(
         <header>
-            <h1>{tituloProps}</h1>
+            <h1>{paginaProps+"\n- "+nrPaginaProps}</h1>
             <button onClick={()=> avisoProps()}>Aviso</button>
+            <div>
+                {children}
+            </div>
         </header>
     );
 }
